@@ -1,46 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
-    <title>Sign in</title>
+    <title>Login</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
-          integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.css" rel="stylesheet">
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
 
-<!--    <script>-->
-<!--        function login() {-->
-<!--            var login = $("#login").val();-->
-<!--            var password = $("#password").val();-->
-
-<!--            $.post("login", {-->
-<!--                "login": login,-->
-<!--                "password": password-->
-<!--            })-->
-<!--                    .done(function (data) {-->
-<!--                        $("#result").empty().append(data);-->
-<!--                    });-->
-<!--        }-->
-<!--    </script>-->
-    <script>
-        function login() {
-            var fullName = $("#fullName").val();
-            var email = $("#email").val();
-            var phoneCountry = $("#phoneCountry").val();
-            var phone = $("#phone").val();
-            var job = $("#job").val();
+    <script type="application/javascript">
+        function signin() {
+            var username = $("#username").val();
             var password = $("#password").val();
-            var confirm = $("#confirm").val();
 
-            $.post("signin", {
-                "fullName": fullName,
-                "email": email,
-                "phoneCountry": phoneCountry,
-                "phone": phone,
-                "job": job,
-                "password": password,
-                "confirm": confirm
+            $.post("login", {
+                "username": username,
+                "password": password
             })
                     .done(function (data) {
                         $("#result").empty().append(data);
@@ -56,21 +34,21 @@
             <div id="login-row" class="row justify-content-center align-items-center">
                 <div id="login-column" class="col-md-6">
                     <div id="login-box" class="col-md-12">
-                        <form class="" method="post" action="">
+                        <form class="form" action="" method="post">
                             <h3 class="text-center text-info">Login</h3>
                             <div class="form-group">
                                 <label for="username" class="text-info">Username:</label><br>
-                                <input type="text" name="login" id="login" class="form-control">
+                                <input type="text" name="username" id="username" class="form-control">
                             </div>
                             <div class="form-group">
                                 <label for="password" class="text-info">Password:</label><br>
-                                <input type="text" name="password" id="password" class="form-control">
+                                <input type="password" name="password" id="password" class="form-control">
                             </div>
                             <div class="form-group">
                                 <label for="remember-me" class="text-info"><span>Remember me</span>
                                     <span><input id="remember-me" name="remember-me" type="checkbox"></span></label>
                                 <br>
-                                <p><input type="button" class="btn btn-primary" value="Sign in" onclick="login();"></p>
+                                <input type="button" class="btn btn-info btn-md" value="Sign in" onclick="signin();">
                             </div>
                             <div id="register-link" class="text-right">
                                 <a href="registration" class="text-info">Register here</a>
@@ -88,3 +66,4 @@
 </div>
 
 </body>
+</html>

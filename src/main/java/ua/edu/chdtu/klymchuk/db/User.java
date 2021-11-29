@@ -1,4 +1,4 @@
-package ua.edu.chdtu.sweater.db;
+package ua.edu.chdtu.klymchuk.db;
 
 
 public class User {

@@ -1,9 +1,9 @@
-package ua.edu.chdtu.sweater;
+package ua.edu.chdtu.klymchuk;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-import ua.edu.chdtu.sweater.db.User;
-import ua.edu.chdtu.sweater.db.UserManager;
+import ua.edu.chdtu.klymchuk.db.User;
+import ua.edu.chdtu.klymchuk.db.UserManager;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

@@ -1,4 +1,4 @@
-package ua.edu.chdtu.sweater;
+package ua.edu.chdtu.klymchuk;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.stereotype.Controller;
